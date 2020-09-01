@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Feedback form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css">
+
+	<script src="js/script.js"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+
+		<div class="modal-show-button">
+			<button id="modal-show-button-btn" class="btn">Модальное окно</button>
+		</div>
+
+		<div id="modal-block" class="modal">
+			<div class="feedback">
+
+				<span class="close">×</span>
+
+				<form action="" name="feedback-form" class="feedback-form">
+
+					<div class="feedback-form__title">
+						<h2>Обратная связь</h2>
+					</div>
+
+					<div class="feedback-form-body">
+
+						<div class="feedback-form-body__lines">
+							<div id="form-line-name" class="feedback-form-body__line">
+								<label id="line-label">Имя</label>
+								<input type="text" id="userName" class="input">
+							</div>
+							<div id="form-line-phone" class="feedback-form-body__line">
+								<label>Телефон</label>
+								<input type="text" id="phone" class="input" placeholder="+7 (123) 456-78-90">
+							</div>
+							<div id="form-line-email" class="feedback-form-body__line">
+								<label>Эл. почта</label>
+								<input type="text" id="email" class="input" placeholder="example@mail.com">
+							</div>
+						</div>
+
+						<div class="feedback-form-body__textarea">
+							<label for="">Сообщение</label>
+							<textarea name="textarea" id="textarea" class="input"></textarea>
+						</div>
+
+						<div class="feedback-form-body__notice">
+							<p>Отправляя форму вы соглашаетесь с <a href="#">пользовательским соглашением</a>
+								и <a href="#">политикой конфиденциальности</a></p>
+						</div>
+
+						<div class="feedback-form-body__button">
+							<button type="submit" class="btn">Отправить</button>
+						</div>
+
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

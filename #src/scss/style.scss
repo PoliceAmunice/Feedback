@@ -1,0 +1,138 @@
+//Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+//Vars
+$fontfamily: 'Roboto', "Helvetica Neue", Helvetica, sans-serif;
+
+//Import reset style for browsers
+@import '_reset';
+
+//Import template styles
+@import '_templates';
+
+
+body {
+	background-color: #E5E5E5;
+	color: #1C1C1C;
+}
+
+.wrapper {
+	min-height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+
+	@extend %flexbox;
+}
+
+.modal {
+	display: none;
+	z-index: 1; 
+	overflow: auto; 
+}
+
+.feedback {
+	position: relative;
+	max-width: 600px;
+	min-height: 632px;
+	background-color: #fff;
+	padding: 45px 55px;
+	animation-name: animate;
+	animation-duration: 0.5s;
+}
+
+.close {
+	position: absolute;
+	cursor: pointer;
+	color: #4d4d4d;;
+	font-size: 35px;
+	right: 0;
+	transform: translate(-15px, -40px);
+ }
+
+
+.feedback-form__title {
+	font-size: 35px;
+	font-weight: 900;
+	letter-spacing: 0.02em;
+	color: #000;
+	margin: 0px 0px 30px;
+}
+
+.feedback-form-body__lines{
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
+}
+
+.feedback-form-body__line {
+	display: inline-block;
+	flex: 0 0 48.5%;
+	min-width: 200px;
+	margin: 0px 0px 17px 0px;
+
+	& input {
+		height: 50px;
+		background-color: #FDFDFD;
+	}
+}
+
+.feedback-form-body__textarea {
+	margin: 0px 0px 30px 0px;
+
+	& textarea {
+		height: 150px;
+		line-height: 22px;
+		background-color: #FAFAFA;
+	}
+}
+
+.feedback-form-body__notice {
+	line-height: 15px;
+	text-align: start;
+	padding: 0px 14px;
+	margin: 0px 0px 30px 0px;
+
+	& a{
+		text-decoration: underline;
+	}
+}
+
+.feedback-form-body__button {
+	text-align: center;
+
+	& button {
+		min-width: 220px;
+	}
+}
+
+
+@media only screen and (max-width: 600px) {
+	.wrapper{
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.feedback-form-body__line {
+		flex: 0 0 100%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.feedback{
+		padding: 40px;
+	}
+
+	.feedback-form__title{
+		font-size: 24px;
+	}
+
+	label,
+	.input,
+	.feedback-form-body__notice {
+		font-size: 16px;
+	}
+}
